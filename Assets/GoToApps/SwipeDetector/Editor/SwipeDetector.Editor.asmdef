@@ -1,0 +1,18 @@
+{
+    "name": "SwipeDetector.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a2c8d973dc13fb64faae3649b233c896"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
