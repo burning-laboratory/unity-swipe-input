@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity
+    guid: 945379dfdfd566803becd56fd9d8234c
   m_configObjects: {}
