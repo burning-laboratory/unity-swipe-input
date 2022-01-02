@@ -10,7 +10,7 @@ namespace BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Player
     public class Character : MonoBehaviour
     {
         private Rigidbody2D _rb;
-        private BurningLab.SwipeDetector.SwipeInput s;
+        
         [System.Serializable]
         private struct CharacterEvents
         {
@@ -22,14 +22,14 @@ namespace BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Player
         [SerializeField] private float _movingSpeed;
         [SerializeField] private CharacterEvents _events;
         
-        private void OnValidate()
+        private void Awake()
         {
             if (_rb == null) _rb = GetComponent<Rigidbody2D>();
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.TryGetComponent<Obstacle>(out Obstacle obstacle))
+            if (other.gameObject.TryGetComponent(out Obstacle obstacle))
             {
                 switch (obstacle.type)
                 {
