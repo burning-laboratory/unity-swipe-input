@@ -1,4 +1,4 @@
-namespace GoToApps.SwipeDetector.Examples.Scripts.MiniGame.Data
+namespace BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Data
 {
     public enum ObstacleType
     {

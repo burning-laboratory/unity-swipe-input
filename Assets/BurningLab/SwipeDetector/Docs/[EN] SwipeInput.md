@@ -37,7 +37,7 @@
 ---
 
 ### Examples:
-- **-** **`GoToApps/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
+- **-** **`BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
 
 ---
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace GoToApps.SwipeDetector
+namespace BurningLab.SwipeDetector
 {
     [AddComponentMenu("GoTo-Apps/Swipe Detector/Swipe Input")]
     public class SwipeInput : MonoBehaviour

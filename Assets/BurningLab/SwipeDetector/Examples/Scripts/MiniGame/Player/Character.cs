@@ -1,16 +1,16 @@
-using GoToApps.SwipeDetector.Examples.Scripts.MiniGame.Data;
-using GoToApps.SwipeDetector.Examples.Scripts.MiniGame.Level.Obstacles;
+using BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Data;
+using BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Level.Obstacles;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GoToApps.SwipeInput.Examples.Scripts.MiniGame.Player
+namespace BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
     public class Character : MonoBehaviour
     {
         private Rigidbody2D _rb;
-        private SwipeDetector.SwipeInput s;
+        private BurningLab.SwipeDetector.SwipeInput s;
         [System.Serializable]
         private struct CharacterEvents
         {

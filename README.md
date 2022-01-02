@@ -42,7 +42,7 @@ The swipe capture system was conceived as a separate module that could take over
 
 
 ### Examples:
-- **-** **`GoToApps/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
+- **-** **`BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
 
 ## Distribute
 
@@ -55,4 +55,4 @@ The swipe capture system was conceived as a separate module that could take over
 
 ## License
 
-Project GoTo-Apps.SwipeDetector is distributed under the MIT license.
+Project Burning-Lab.SwipeDetector is distributed under the MIT license.

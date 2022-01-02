@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GoToApps.SwipeDetector.Examples.Scripts.MiniGame.Level
+namespace BurningLab.SwipeDetector.Examples.Scripts.MiniGame.Level
 {
     public class MapMover : MonoBehaviour
     {

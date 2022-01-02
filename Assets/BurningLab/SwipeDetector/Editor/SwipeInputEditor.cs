@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace GoToApps.SwipeInput.Editor
 {
-    [CustomEditor(typeof(SwipeDetector.SwipeInput))]
+    [CustomEditor(typeof(BurningLab.SwipeDetector.SwipeInput))]
     public class SwipeInputEditor : UnityEditor.Editor
     {
-        private SwipeDetector.SwipeInput _model;
+        private BurningLab.SwipeDetector.SwipeInput _model;
         private SerializedProperty _minSwipeDistance;
         private SerializedProperty _isPaused;
         private SerializedProperty _showDebugLogs;
@@ -15,7 +15,7 @@ namespace GoToApps.SwipeInput.Editor
 
         private void OnEnable()
         {
-            _model = (SwipeDetector.SwipeInput) target;
+            _model = (BurningLab.SwipeDetector.SwipeInput) target;
 
             _minSwipeDistance = serializedObject.FindProperty("_minSwipeDistance");
             _isPaused = serializedObject.FindProperty("_isPaused");
