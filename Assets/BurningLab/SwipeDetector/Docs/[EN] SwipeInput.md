@@ -43,13 +43,7 @@
 
 ### Author Contacts:
 
-**Email - [n.fridman@goto-apps.com](mailto://n.fridman@goto-apps.com)** 
-
-**VK - [Nikita Fridman](https://vk.com/id561232651)** 
-
-**YouTube - [n.fridman](https://www.youtube.com/channel/UCU6q5jm1oWMB660w_CGSmVA/)** 
-
-**Instagram - [n.fridman3116](https://www.instagram.com/n.fridman3116/)**
+**Email - [n.fridman@burning-lab.com](mailto://n.fridman@burning-lab.com)**
 
 ---
 
