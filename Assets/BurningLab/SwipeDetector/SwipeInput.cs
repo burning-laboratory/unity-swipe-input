@@ -50,9 +50,9 @@ namespace BurningLab.SwipeDetector
         private void Log(string className, string methodName, string message)
         {
 #if UNITY_EDITOR
-            Debug.Log($"{{<b><color=white>GoTo-</color><color=lime>Apps</color></b>}} => [{className}] - (<color=yellow>{methodName}</color>) -> {message}", gameObject);
+            Debug.Log($"{{<b><color=white>Burning-</color><color=lime>Lab</color></b>}} => [{className}] - (<color=yellow>{methodName}</color>) -> {message}", gameObject);
 #else
-            Debug.Log($"{{GoTo-Apps}} => [{className}] - ({methodName}) -> {message}");
+            Debug.Log($"{{Burning-Lab}} => [{className}] - ({methodName}) -> {message}");
 #endif
         }
         
