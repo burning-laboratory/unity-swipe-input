@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace BurningLab.SwipeDetector
 {
-    [AddComponentMenu("GoTo-Apps/Swipe Detector/Swipe Input")]
+    [AddComponentMenu("Burning-Lab/Swipe Detector/Swipe Input")]
     public class SwipeInput : MonoBehaviour
     {
         [System.Serializable]
