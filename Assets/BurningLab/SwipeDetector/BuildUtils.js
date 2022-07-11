@@ -8,6 +8,7 @@ class BuildSettings{
     static ReadmeDistPath = './readme-dist.md';
     static ReadmeOutPaths = [
         './README.md',
+        './../../../README.md'
     ];
 }
 
