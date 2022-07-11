@@ -1,12 +1,12 @@
-
 <p align="center">
       <img src="https://i.ibb.co/WWFP44j/Git-Hub-Logo.png" alt="Project Logo" width="726">
 </p>
 
 <p align="center">
-   <img src="https://img.shields.io/badge/Engine-Unity%202020.3.4.f1-blueviolet" alt="Unity Version">
-   <img src="https://img.shields.io/badge/Version-v1.0%20(Alpha)-blue" alt="Game Version">
-   <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
+    <img src="https://build.burning-lab.com/app/rest/builds/buildType:UnitySwipeInput_ProductionBuildAndPublish/statusIcon" alt="Build Status">
+    <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
+    <img src="https://img.shields.io/badge/Version-1.0.2-blue" alt="Game Version">
+    <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 
 ## About
