@@ -17,7 +17,7 @@
     "Input"
   ],
   "scripts": {
-    "build" : "node test.js"
+    "build" : "node BuildUtils.js"
   },
   "author": {
     "name": "n.fridman",
