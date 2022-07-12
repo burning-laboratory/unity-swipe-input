@@ -1,4 +1,7 @@
-﻿using BurningLab.SwipeDetector.Utils;
+﻿#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+    using BurningLab.SwipeDetector.Utils;
+#endif
+    
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -43,6 +46,40 @@ namespace BurningLab.SwipeDetector
 
         #endregion
 
+        #region Public Events
+        
+        /// <summary>
+        /// On swipe start event.
+        /// </summary>
+        public UnityEvent<Vector2> OnSwipeStart => _events.swipeStart;
+        
+        /// <summary>
+        /// On swipe end event.
+        /// </summary>
+        public UnityEvent<Vector2> OnSwipeEnd => _events.swipeEnd;
+        
+        /// <summary>
+        /// On swipe up event.
+        /// </summary>
+        public UnityEvent OnSwipeUp => _events.swipeUp;
+        
+        /// <summary>
+        /// On swipe right event.
+        /// </summary>
+        public UnityEvent OnSwipeRight => _events.swipeRight;
+        
+        /// <summary>
+        /// On swipe down event.
+        /// </summary>
+        public UnityEvent OnSwipeDown => _events.swipeDown;
+        
+        /// <summary>
+        /// On swipe left event.
+        /// </summary>
+        public UnityEvent OnSwipeLeft => _events.swipeLeft;
+
+        #endregion
+        
         #region Unity Event Methods
 
         private void Update()
