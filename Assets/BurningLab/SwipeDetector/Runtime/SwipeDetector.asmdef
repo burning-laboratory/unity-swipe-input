@@ -2,7 +2,8 @@
     "name": "SwipeDetector",
     "rootNamespace": "",
     "references": [
-        "GUID:79d07b124c2c718408cdc9738bddf482"
+        "GUID:79d07b124c2c718408cdc9738bddf482",
+        "GUID:8fb32673df948cf418f8e014396524e7"
     ],
     "includePlatforms": [
         "Android",
