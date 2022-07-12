@@ -1992,9 +1992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17cd10cf8823814791424c180b30fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSwipeDistance: 15
+  _swipeDetectionMode: 1
+  _minSwipeDistance: 150
   _isPaused: 0
-  _showDebugLogs: 1
   _events:
     swipeStart:
       m_PersistentCalls:
