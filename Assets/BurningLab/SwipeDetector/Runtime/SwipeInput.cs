@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BurningLab.SwipeDetector.Utils;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace BurningLab.SwipeDetector
@@ -37,40 +38,10 @@ namespace BurningLab.SwipeDetector
         [Tooltip("Pause. If the value is 'true', the component does not process swipes and does not trigger events.")]
         [SerializeField] private bool _isPaused;
 
-        [Tooltip("Specifies whether to output logs for developers. To output logs, use `Debug. Log'.")]
-        [SerializeField] private bool _showDebugLogs;
-        
         [Tooltip("Swipe input events.")]
         [SerializeField] private InputEvents _events;
 
         #endregion
-
-        #region Initialize
-
-        /// <summary>
-        ///  Create Swipe Input.
-        /// </summary>
-        public SwipeInput()
-        {
-            _showDebugLogs = true;
-        }
-
-        #endregion
-        
-        /// <summary>
-        /// Draw log record to console.
-        /// </summary>
-        /// <param name="className">Class name</param>
-        /// <param name="methodName">Method name</param>
-        /// <param name="message">Message</param>
-        private void Log(string className, string methodName, string message)
-        {
-#if UNITY_EDITOR
-            Debug.Log($"{{<b><color=white>Burning-</color><color=lime>Lab</color></b>}} => [{className}] - (<color=yellow>{methodName}</color>) -> {message}", gameObject);
-#else
-            Debug.Log($"{{Burning-Lab}} => [{className}] - ({methodName}) -> {message}");
-#endif
-        }
 
         #region Unity Event Methods
 
@@ -97,12 +68,16 @@ namespace BurningLab.SwipeDetector
                 {
                     if (delta.x < 0)
                     {
-                        if (_showDebugLogs) Log("SwipeInput", "Update", "Swipe right detected");
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe right detected");   
+#endif
                         _events.swipeRight.Invoke();
                     }
                     else
                     {
-                        if(_showDebugLogs) Log("SwipeInput", "Update", "Swipe left detected");
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe left detected.");   
+#endif
                         _events.swipeLeft.Invoke();
                     }
                 }
@@ -110,12 +85,16 @@ namespace BurningLab.SwipeDetector
                 {
                     if (delta.y < 0)
                     {
-                        if (_showDebugLogs) Log("SwipeInput", "Update", "Swipe up detected");
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe up detected.");
+#endif
                         _events.swipeUp.Invoke();
                     }
                     else
                     {
-                        if (_showDebugLogs) Log("SwipeInput", "Update", "Swipe down detected");
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe down detected.");
+#endif
                         _events.swipeDown.Invoke();
                     }
                 }
