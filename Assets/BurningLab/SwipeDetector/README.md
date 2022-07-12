@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="https://build.burning-lab.com/app/rest/builds/buildType:UnitySwipeInput_ProductionBuildAndPublish/statusIcon" alt="Build Status">
-    <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
+    <img src="https://img.shields.io/badge/Engine-2020.5-blueviolet" alt="Unity Version">
     <img src="https://img.shields.io/badge/Version-1.0.2-blue" alt="Game Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
