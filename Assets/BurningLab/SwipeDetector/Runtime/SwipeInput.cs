@@ -6,6 +6,8 @@ namespace BurningLab.SwipeDetector
     [AddComponentMenu("Burning-Lab/Swipe Detector/Swipe Input")]
     public class SwipeInput : MonoBehaviour
     {
+        #region Inner Types
+
         [System.Serializable]
         private struct InputEvents
         {
@@ -16,9 +18,17 @@ namespace BurningLab.SwipeDetector
             public UnityEvent swipeDown;
             public UnityEvent swipeLeft;
         }
+
+        #endregion
+
+        #region Private Fields
         
         private Vector2 _posIn;
         private Vector2 _posOut;
+        
+        #endregion
+
+        #region Settings
 
         [Header("Settings")] 
         [Tooltip("Minimal swipe lenght.")] 
@@ -33,6 +43,10 @@ namespace BurningLab.SwipeDetector
         [Tooltip("Swipe input events.")]
         [SerializeField] private InputEvents _events;
 
+        #endregion
+
+        #region Initialize
+
         /// <summary>
         ///  Create Swipe Input.
         /// </summary>
@@ -40,6 +54,8 @@ namespace BurningLab.SwipeDetector
         {
             _showDebugLogs = true;
         }
+
+        #endregion
         
         /// <summary>
         /// Draw log record to console.
@@ -55,7 +71,9 @@ namespace BurningLab.SwipeDetector
             Debug.Log($"{{Burning-Lab}} => [{className}] - ({methodName}) -> {message}");
 #endif
         }
-        
+
+        #region Unity Event Methods
+
         private void Update()
         {
             if (_isPaused) return;
@@ -103,7 +121,11 @@ namespace BurningLab.SwipeDetector
                 }
             }
         }
-        
+
+        #endregion
+
+        #region Public Methods
+
         /// <summary>
         /// Set Pause (No recognize swipes).
         /// </summary>
@@ -113,5 +135,7 @@ namespace BurningLab.SwipeDetector
         /// Unset Pause (Recognize swipes).
         /// </summary>
         public void UnsetPause() => _isPaused = false;
+
+        #endregion
     }
 }
