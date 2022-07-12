@@ -1,8 +1,9 @@
 ﻿#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
     using BurningLab.SwipeDetector.Utils;
 #endif
-    
-using UnityEngine;
+
+    using BurningLab.SwipeDetector.Types;
+    using UnityEngine;
 using UnityEngine.Events;
 
 namespace BurningLab.SwipeDetector
@@ -26,15 +27,16 @@ namespace BurningLab.SwipeDetector
         #endregion
 
         #region Private Fields
-        
-        private Vector2 _posIn;
-        private Vector2 _posOut;
+
+        private SwipeData _swipe;
         
         #endregion
 
         #region Settings
 
         [Header("Settings")] 
+        [SerializeField] private DetectionMode _swipeDetectionMode;
+        
         [Tooltip("Minimal swipe lenght.")] 
         [SerializeField] [Range(0, 1000)] private float _minSwipeDistance;
         
@@ -43,7 +45,7 @@ namespace BurningLab.SwipeDetector
 
         [Tooltip("Swipe input events.")]
         [SerializeField] private InputEvents _events;
-
+        
         #endregion
 
         #region Public Events
@@ -79,6 +81,36 @@ namespace BurningLab.SwipeDetector
         public UnityEvent OnSwipeLeft => _events.swipeLeft;
 
         #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Invoking swipe events for computed swipe.
+        /// </summary>
+        /// <param name="swipeDirection">Computes swipe direction.</param>
+        private void ProcessComputedSwipe(SwipeDirection swipeDirection)
+        {
+            switch (swipeDirection)
+            {
+                case SwipeDirection.Up:
+                    _events.swipeUp?.Invoke();
+                    break;
+                
+                case SwipeDirection.Right:
+                    _events.swipeRight?.Invoke();
+                    break;
+                
+                case SwipeDirection.Down:
+                    _events.swipeDown?.Invoke();
+                    break;
+                
+                case SwipeDirection.Left:
+                    _events.swipeLeft?.Invoke();
+                    break;
+            }
+        }
+
+        #endregion
         
         #region Unity Event Methods
 
@@ -88,58 +120,51 @@ namespace BurningLab.SwipeDetector
             
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                _posIn = Input.mousePosition;
-                _events.swipeStart.Invoke(_posIn);
+                _swipe.positionStart = Input.mousePosition;
+                _events.swipeStart.Invoke(_swipe.positionStart);
             }
-            
-            if (Input.GetKeyUp(KeyCode.Mouse0))
+
+            if (_swipe.positionStart != Vector2.zero) _swipe.positionEnd = Input.mousePosition;
+            else _swipe.positionEnd = Vector2.zero;
+
+            switch (_swipeDetectionMode)
             {
-                _posOut = Input.mousePosition;
-
-                _events.swipeEnd.Invoke(_posOut);
-
-                Vector2 delta = _posIn - _posOut;
-                if (Mathf.Abs(delta.magnitude) < _minSwipeDistance) return;
+                case DetectionMode.Completed:
+                    if (Input.GetKeyUp(KeyCode.Mouse0))
+                    {
+                        _events.swipeEnd.Invoke(_swipe.positionEnd);
+                        if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
+                        {
+                            SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
+                            ProcessComputedSwipe(swipeDirection);
+                            _swipe.Reset();
+                        }
+                    }
+                    break;
                 
-                if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
-                {
-                    if (delta.x < 0)
+                case DetectionMode.Uncompleted:
+                    if (_swipe.positionEnd != Vector2.zero)
                     {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe right detected");   
-#endif
-                        _events.swipeRight.Invoke();
+                        if (Input.GetKeyUp(KeyCode.Mouse0))
+                        {
+                            _swipe.Reset();
+                            return;
+                        }
+
+                        if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
+                        {
+                            _events.swipeEnd.Invoke(_swipe.positionEnd);
+                            SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
+                            ProcessComputedSwipe(swipeDirection);
+                            _swipe.Reset();
+                        }
                     }
-                    else
-                    {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe left detected.");   
-#endif
-                        _events.swipeLeft.Invoke();
-                    }
-                }
-                else
-                {
-                    if (delta.y < 0)
-                    {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe up detected.");
-#endif
-                        _events.swipeUp.Invoke();
-                    }
-                    else
-                    {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                        UnityConsole.PrintLog("SwipeInput", "Update","Swipe down detected.");
-#endif
-                        _events.swipeDown.Invoke();
-                    }
-                }
+                    break;
             }
         }
 
         #endregion
-
+        
         #region Public Methods
 
         /// <summary>
