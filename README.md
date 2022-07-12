@@ -17,7 +17,7 @@ The swipe capture system was conceived as a separate module that could take over
 
 ### Settings:
 - **-** **`Min Swipe Distance (float)`** - Minimum swipe length.
-
+    
 - **-** **`Is Paused (bool)`** - Pause. If the value is `true`, the component does not process swipes and does not raise events.
 
 - **-** **`Show Debug Logs (bool)`** - Specifies whether to output logs for developers. To output logs, use `Debug.Log`.
