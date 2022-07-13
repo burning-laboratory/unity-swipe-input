@@ -6,7 +6,8 @@
         "UnityEditor.TestRunner",
         "SwipeDetector",
         "SwipeDetector.Types",
-        "SwipeDetector.Utils"
+        "SwipeDetector.Utils",
+        "SwipeDetector.RuntimeTests.TestsData"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
