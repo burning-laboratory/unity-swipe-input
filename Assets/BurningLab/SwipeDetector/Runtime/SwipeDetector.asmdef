@@ -1,13 +1,15 @@
 {
     "name": "SwipeDetector",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:79d07b124c2c718408cdc9738bddf482",
+        "GUID:8fb32673df948cf418f8e014396524e7"
+    ],
     "includePlatforms": [
         "Android",
         "Editor",
         "iOS",
         "LinuxStandalone64",
-        "Lumin",
         "macOSStandalone",
         "WindowsStandalone32",
         "WindowsStandalone64"

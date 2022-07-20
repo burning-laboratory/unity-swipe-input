@@ -1,15 +1,7 @@
-﻿# Asset Defines
+﻿# Configuration defines
 
----
+## Configuration defines list:
 
-## Defines list
+- `DEBUG_BURNING_LAB_SDK` - Output logs from all assets from Burning-Lab.
 
- - `DEBUG_BURNING_LAB_SDK` - Enable all burning-lab assets output logs.
-
- - `DEBUG_SWIPE_DETECTOR` - Enable swipe detector logs output only.
-
----
-
-###### Component Developed By Nikita Fridman (Copyright Free)
-
----
+- `DEBUG_SWIPE_DETECTOR` - Outputs logs only from the Swipe Detecor asset.
