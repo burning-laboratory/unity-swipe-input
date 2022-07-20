@@ -6,7 +6,7 @@
     <img src="https://build.burning-lab.com/app/rest/builds/buildType:UnitySwipeInput_ProductionBuildAndPublish/statusIcon" alt="Build Status">
     <a href="https://n-fridman.myjetbrains.com/youtrack/agiles/121-18/current"><img src="https://img.shields.io/badge/Roadmap-YouTrack-orange" alt="Roadmap Link"></a>
     <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
-    <img src="https://img.shields.io/badge/Version-1.0.5-blue" alt="Game Version">
+    <img src="https://img.shields.io/badge/Version-1.0.6-blue" alt="Game Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 
