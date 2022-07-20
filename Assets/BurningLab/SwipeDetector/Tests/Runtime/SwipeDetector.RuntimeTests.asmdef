@@ -1,0 +1,25 @@
+{
+    "name": "SwipeDetector.RuntimeTests",
+    "rootNamespace": "SwipeDetector.RuntimeTests",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "SwipeDetector",
+        "SwipeDetector.Types",
+        "SwipeDetector.Utils",
+        "SwipeDetector.RuntimeTests.TestsData"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

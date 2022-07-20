@@ -4,7 +4,8 @@
 
 <p align="center">
     <img src="https://build.burning-lab.com/app/rest/builds/buildType:UnitySwipeInput_ProductionBuildAndPublish/statusIcon" alt="Build Status">
-    <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
+    <a href="https://n-fridman.myjetbrains.com/youtrack/agiles/121-18/current"><img src="https://img.shields.io/badge/Roadmap-YouTrack-orange" alt="Roadmap Link"></a>
+    <img src="https://img.shields.io/badge/Engine-C:\Program Files\nodejs\node.exe-blueviolet" alt="Unity Version">
     <img src="https://img.shields.io/badge/Version-1.0.2-blue" alt="Game Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
@@ -16,11 +17,11 @@ The swipe capture system was conceived as a separate module that could take over
 ## Documentation
 
 ### Settings:
+- **-** **`Swipe Detection Mode (DetectionMode)`** - Swipes detection mode.
+
 - **-** **`Min Swipe Distance (float)`** - Minimum swipe length.
 
 - **-** **`Is Paused (bool)`** - Pause. If the value is `true`, the component does not process swipes and does not raise events.
-
-- **-** **`Show Debug Logs (bool)`** - Specifies whether to output logs for developers. To output logs, use `Debug.Log`.
 
 ### Events:
 - **-** **`Swipe Start (UnityEvent<Vector2>)`** - An event that is triggered when the user touches the screen.
@@ -40,14 +41,18 @@ The swipe capture system was conceived as a separate module that could take over
 
 - **-** **`SwipeInput.UnsetPause()`** **`void`** - Removes the pause.
 
+### Configuration defines:
+
+- `DEBUG_BURNING_LAB_SDK` - Output all Burning-Lab sdk logs.
+
+- `DEBUG_SWIPE_DETECTOR` - Output swipe detector logs only.
 
 ### Examples:
 - **-** **`BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
 
 ## Distribute
 
-- Download GoTo-Apps.SwipeDetector on [Itch.io](https://nfridman.itch.io/goto-apps-swipe-input)
-
+- Download Burning-Lab.SwipeDetector on [Itch.io](https://nfridman.itch.io/goto-apps-swipe-input)
 
 ## Developers
 

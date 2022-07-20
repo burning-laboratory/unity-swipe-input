@@ -1,1 +1,20 @@
-{"name":"com.burning-lab.swipedetector","version":"1.0.2","displayName":"Swipe Detector","description":"Swipe detection system for unity game engine.","unity":"2020.3","documentationUrl":"https://github.com/burning-laboratory/unity-swipe-input/tree/main/Assets/BurningLab/SwipeDetector/Docs","changelogUrl":"https://github.com/burning-laboratory/unity-swipe-input/releases/tag/production-v1.1","licensesUrl":"https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt","repository":{"type":"git","url":"https://github.com/burning-laboratory/unity-swipe-input"},"keywords":["Unity","Swipe","Input"],"scripts":{"build":"node BuildUtils.js"},"author":{"name":"n.fridman","email":"n.fridman@burning-lab.com","url":"https://burning-lab.com"}}
+{
+  "name":"com.burning-lab.swipedetector",
+  "version":"1.0.2",
+  "displayName":"Swipe Detector",
+  "description":"Swipe detection system for unity game engine.",
+  "unity":"2020.3",
+  "documentationUrl":"https://github.com/burning-laboratory/unity-swipe-input/tree/main/Assets/BurningLab/SwipeDetector/Docs",
+  "changelogUrl":"https://github.com/burning-laboratory/unity-swipe-input/releases/tag/production-v1.1",
+  "licensesUrl":"https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt",
+  "repository":{"type":"git","url":"https://github.com/burning-laboratory/unity-swipe-input"},
+  "keywords":["Unity","Swipe","Input"],
+  "scripts":{
+    "build":"node ./BuildUtils/BuildUtils.js"
+  },
+  "author":{
+    "name":"Burning-Lab", 
+    "email":"support@burning-lab.com",
+    "url":"https://burning-lab.com"
+  }
+}

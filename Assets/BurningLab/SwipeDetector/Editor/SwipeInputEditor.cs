@@ -10,8 +10,8 @@ namespace GoToApps.SwipeInput.Editor
         private BurningLab.SwipeDetector.SwipeInput _model;
         private SerializedProperty _minSwipeDistance;
         private SerializedProperty _isPaused;
-        private SerializedProperty _showDebugLogs;
         private SerializedProperty _events;
+        private SerializedProperty _detectionMode;
 
         private void OnEnable()
         {
@@ -19,8 +19,8 @@ namespace GoToApps.SwipeInput.Editor
 
             _minSwipeDistance = serializedObject.FindProperty("_minSwipeDistance");
             _isPaused = serializedObject.FindProperty("_isPaused");
-            _showDebugLogs = serializedObject.FindProperty("_showDebugLogs");
             _events = serializedObject.FindProperty("_events");
+            _detectionMode = serializedObject.FindProperty("_swipeDetectionMode");
         }
 
         public override void OnInspectorGUI()
@@ -33,9 +33,9 @@ namespace GoToApps.SwipeInput.Editor
 
         private void DrawFields()
         {
+            EditorGUILayout.PropertyField(_detectionMode);
             EditorGUILayout.PropertyField(_minSwipeDistance);
             EditorGUILayout.PropertyField(_isPaused);
-            EditorGUILayout.PropertyField(_showDebugLogs);
             EditorGUILayout.PropertyField(_events);
         }
         
