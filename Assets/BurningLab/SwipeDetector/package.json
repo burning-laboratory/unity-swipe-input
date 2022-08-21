@@ -1,6 +1,6 @@
 {
   "name": "com.burning-lab.swipedetector",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "Swipe Detector",
   "description": "Swipe detection system for unity game engine.",
   "unity": "2020.3",
