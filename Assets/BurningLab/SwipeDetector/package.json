@@ -12,9 +12,17 @@
   "scripts":{
     "build":"node ./BuildUtils/BuildUtils.js"
   },
-  "author":{
-    "name":"Burning-Lab", 
-    "email":"support@burning-lab.com",
-    "url":"https://burning-lab.com"
+  "keywords": [
+    "Unity",
+    "Swipe",
+    "Input"
+  ],
+  "scripts": {
+    "build": "node ./BuildUtils/BuildUtils.js"
+  },
+  "author": {
+    "name": "Burning-Lab",
+    "email": "support@burning-lab.com",
+    "url": "https://burning-lab.com"
   }
 }
