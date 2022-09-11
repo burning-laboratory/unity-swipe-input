@@ -9,14 +9,6 @@
   "licensesUrl":"https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt",
   "repository":{"type":"git","url":"https://github.com/burning-laboratory/unity-swipe-input"},
   "keywords":["Unity","Swipe","Input"],
-  "scripts":{
-    "build":"node ./BuildUtils/BuildUtils.js"
-  },
-  "keywords": [
-    "Unity",
-    "Swipe",
-    "Input"
-  ],
   "scripts": {
     "build": "node ./BuildUtils/BuildUtils.js"
   },
