@@ -1,10 +1,7 @@
-﻿#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-    using BurningLab.SwipeDetector.Utils;
-#endif
-
-    using BurningLab.SwipeDetector.Types;
-    using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using BurningLab.SwipeDetector.Utils;
+using BurningLab.SwipeDetector.Types;
 
 namespace BurningLab.SwipeDetector
 {
