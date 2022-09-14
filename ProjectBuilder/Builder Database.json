@@ -1,0 +1,58 @@
+{
+    "buildsDirectory": "Builds",
+    "configurations": [
+        {
+            "_expanded": false,
+            "name": "[WINDOWS] Demo App",
+            "targetPlatform": 5,
+            "outputFolder": "Windows/[[WINDOWS] Demo App]",
+            "artifactName": "Swipe Detector Demo.exe",
+            "buildAndroidAppBundle": false,
+            "exportProject": false,
+            "developmentBuild": true,
+            "_scenesExpanded": false,
+            "scenes": [
+                {
+                    "_expanded": false,
+                    "name": "SwipeInputDemoScene",
+                    "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
+                }
+            ],
+            "_definesExpanded": false,
+            "defines": [
+                "DEBUG_BURNING_LAB_SDK",
+                "DEBUG_SWIPE_DETECTOR"
+            ]
+        },
+        {
+            "_expanded": false,
+            "name": "[ANDROID] Demo App",
+            "targetPlatform": 13,
+            "outputFolder": "Android",
+            "artifactName": "Swipe Detector Demo.apk",
+            "buildAndroidAppBundle": false,
+            "exportProject": false,
+            "developmentBuild": true,
+            "_scenesExpanded": false,
+            "scenes": [
+                {
+                    "_expanded": false,
+                    "name": "SwipeInputDemoScene",
+                    "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
+                }
+            ],
+            "_definesExpanded": false,
+            "defines": [
+                "DEBUG_BURNING_LAB_SDK",
+                "DEBUG_PROJECT_BUILDER",
+                "DEBUG_SWIPE_DETECTOR"
+            ]
+        }
+    ],
+    "defines": [
+        "NONE",
+        "DEBUG_BURNING_LAB_SDK",
+        "DEBUG_PROJECT_BUILDER",
+        "DEBUG_SWIPE_DETECTOR"
+    ]
+}
