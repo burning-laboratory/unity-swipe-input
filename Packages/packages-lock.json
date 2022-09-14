@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.burning-lab.projectbuilder": {
+      "version": "0.0.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.burning-lab.com"
+    },
     "com.unity.2d.animation": {
       "version": "5.0.4",
       "depth": 0,

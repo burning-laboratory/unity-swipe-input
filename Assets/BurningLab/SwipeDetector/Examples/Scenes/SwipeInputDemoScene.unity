@@ -1993,7 +1993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swipeDetectionMode: 1
-  _minSwipeDistance: 150
+  _detectMultipleSwipes: 1
+  _minSwipeDistance: 50
   _isPaused: 0
   _events:
     swipeStart:
@@ -2002,44 +2003,9 @@ MonoBehaviour:
     swipeEnd:
       m_PersistentCalls:
         m_Calls: []
-    swipeUp:
+    onSwipeDetected:
       m_PersistentCalls:
         m_Calls: []
-    swipeRight:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1826865068}
-          m_TargetAssemblyTypeName: GoToApps.Input.Examples.Scripts.Player.Character,
-            Assembly-CSharp
-          m_MethodName: MoveRight
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    swipeDown:
-      m_PersistentCalls:
-        m_Calls: []
-    swipeLeft:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1826865068}
-          m_TargetAssemblyTypeName: GoToApps.Input.Examples.Scripts.MiniGame.Player.Character,
-            Assembly-CSharp
-          m_MethodName: MoveLeft
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1730764571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,6 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16289edeea7f47e73bf17bfb502df21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _swipeInput: {fileID: 1726895882}
   _movingSpeed: 50
   _events:
     characterCompleteLevel:
