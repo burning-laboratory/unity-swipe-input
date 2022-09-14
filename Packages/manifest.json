@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.burning-lab.projectbuilder": "0.0.6",
     "com.unity.2d.animation": "5.0.4",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.0.2",
@@ -47,5 +48,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Burning-Lab Registry",
+      "url": "https://packages.burning-lab.com",
+      "scopes": [
+        "com.burning-lab"
+      ]
+    }
+  ]
 }
