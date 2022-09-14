@@ -15,10 +15,7 @@ namespace BurningLab.SwipeDetector
         {
             public UnityEvent<Vector2> swipeStart;
             public UnityEvent<Vector2> swipeEnd;
-            public UnityEvent swipeUp;
-            public UnityEvent swipeRight;
-            public UnityEvent swipeDown;
-            public UnityEvent swipeLeft;
+            public UnityEvent<SwipeDirection> onSwipeDetected;
         }
 
         #endregion
@@ -33,6 +30,9 @@ namespace BurningLab.SwipeDetector
 
         [Header("Settings")] 
         [SerializeField] private DetectionMode _swipeDetectionMode;
+
+        [Tooltip("Enable if need detection more 1 swipe directions before user release touch.")]
+        [SerializeField] private bool _detectMultipleSwipes;
         
         [Tooltip("Minimal swipe lenght.")] 
         [SerializeField] [Range(0, 1000)] private float _minSwipeDistance;
@@ -45,6 +45,15 @@ namespace BurningLab.SwipeDetector
         
         #endregion
 
+        #region Private Fields
+        
+        /// <summary>
+        /// Last detected swipe direction.
+        /// </summary>
+        private SwipeDirection _lastDetectedSwipeDirection;
+
+        #endregion
+        
         #region Public Events
         
         /// <summary>
@@ -58,57 +67,12 @@ namespace BurningLab.SwipeDetector
         public UnityEvent<Vector2> OnSwipeEnd => _events.swipeEnd;
         
         /// <summary>
-        /// On swipe up event.
+        /// On swipe detected event.
         /// </summary>
-        public UnityEvent OnSwipeUp => _events.swipeUp;
-        
-        /// <summary>
-        /// On swipe right event.
-        /// </summary>
-        public UnityEvent OnSwipeRight => _events.swipeRight;
-        
-        /// <summary>
-        /// On swipe down event.
-        /// </summary>
-        public UnityEvent OnSwipeDown => _events.swipeDown;
-        
-        /// <summary>
-        /// On swipe left event.
-        /// </summary>
-        public UnityEvent OnSwipeLeft => _events.swipeLeft;
+        public UnityEvent<SwipeDirection> OnSwipeDetected => _events.onSwipeDetected;
 
         #endregion
 
-        #region Private Methods
-
-        /// <summary>
-        /// Invoking swipe events for computed swipe.
-        /// </summary>
-        /// <param name="swipeDirection">Computes swipe direction.</param>
-        private void ProcessComputedSwipe(SwipeDirection swipeDirection)
-        {
-            switch (swipeDirection)
-            {
-                case SwipeDirection.Up:
-                    _events.swipeUp?.Invoke();
-                    break;
-                
-                case SwipeDirection.Right:
-                    _events.swipeRight?.Invoke();
-                    break;
-                
-                case SwipeDirection.Down:
-                    _events.swipeDown?.Invoke();
-                    break;
-                
-                case SwipeDirection.Left:
-                    _events.swipeLeft?.Invoke();
-                    break;
-            }
-        }
-
-        #endregion
-        
         #region Unity Event Methods
 
         private void Update()
@@ -121,42 +85,58 @@ namespace BurningLab.SwipeDetector
                 _events.swipeStart.Invoke(_swipe.positionStart);
             }
 
-            if (_swipe.positionStart != Vector2.zero) _swipe.positionEnd = Input.mousePosition;
-            else _swipe.positionEnd = Vector2.zero;
-
-            switch (_swipeDetectionMode)
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                case DetectionMode.Completed:
-                    if (Input.GetKeyUp(KeyCode.Mouse0))
-                    {
-                        _events.swipeEnd.Invoke(_swipe.positionEnd);
-                        if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
-                        {
-                            SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
-                            ProcessComputedSwipe(swipeDirection);
-                            _swipe.Reset();
-                        }
-                    }
-                    break;
-                
-                case DetectionMode.Uncompleted:
-                    if (_swipe.positionEnd != Vector2.zero)
-                    {
+                if (_swipe.positionStart != Vector2.zero) _swipe.positionEnd = Input.mousePosition;
+                else _swipe.positionEnd = Vector2.zero;
+
+                switch (_swipeDetectionMode)
+                {
+                    case DetectionMode.Completed:
                         if (Input.GetKeyUp(KeyCode.Mouse0))
                         {
-                            _swipe.Reset();
-                            return;
-                        }
-
-                        if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
-                        {
                             _events.swipeEnd.Invoke(_swipe.positionEnd);
-                            SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
-                            ProcessComputedSwipe(swipeDirection);
-                            _swipe.Reset();
+                            if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
+                            {
+                                SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
+                                
+                                if (swipeDirection == _lastDetectedSwipeDirection)
+                                    return;
+                                _lastDetectedSwipeDirection = swipeDirection;
+                                
+                                _events.onSwipeDetected?.Invoke(swipeDirection);
+                                _swipe.Reset();
+                            }
                         }
-                    }
-                    break;
+                        break;
+                
+                    case DetectionMode.Uncompleted:
+                        if (_swipe.positionEnd != Vector2.zero)
+                        {
+                            if (Input.GetKeyUp(KeyCode.Mouse0))
+                            {
+                                _swipe.Reset();
+                                return;
+                            }
+
+                            if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
+                            {
+                                _events.swipeEnd.Invoke(_swipe.positionEnd);
+                                SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
+                                
+                                if (swipeDirection == _lastDetectedSwipeDirection)
+                                    return;
+                                _lastDetectedSwipeDirection = swipeDirection;
+                                
+                                _events.onSwipeDetected?.Invoke(swipeDirection);
+                                _swipe.Reset();
+                            }
+                        }
+                        break;
+                }
+
+                if (_detectMultipleSwipes)
+                    _swipe.positionStart = Input.mousePosition;
             }
         }
 

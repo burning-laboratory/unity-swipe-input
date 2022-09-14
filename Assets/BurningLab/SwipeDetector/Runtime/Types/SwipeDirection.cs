@@ -6,6 +6,11 @@
     public enum SwipeDirection
     {
         /// <summary>
+        /// No swipe value.
+        /// </summary>
+        Default,
+        
+        /// <summary>
         /// Up swipe.
         /// </summary>
         Up,
