@@ -17,11 +17,22 @@
     "Input"
   ],
   "scripts": {
-    "build": "node ./BuildUtils/BuildUtils.js"
+    "build": "node ./node_modules/com.burning-lab.utils.js-build-utils/ReadmeBuilder.js",
+    "set-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/ReleaseSuffixSetter.js"
   },
   "author": {
     "name": "Burning-Lab",
     "email": "support@burning-lab.com",
     "url": "https://burning-lab.com"
+  },
+  "samples": [
+    {
+      "displayName": "Swipe input demo app",
+      "description": "Example swipe input application.",
+      "path": "Examples/Swipe Input Demo App"
+    }
+  ],
+  "devDependencies": {
+    "com.burning-lab.utils.js-build-utils": "^0.0.8"
   }
 }
