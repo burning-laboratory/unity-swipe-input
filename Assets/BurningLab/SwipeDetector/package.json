@@ -1,41 +1,41 @@
 {
-  "name": "com.burning-lab.swipedetector",
-  "version": "1.0.9-exp",
-  "displayName": "Swipe Detector",
-  "description": "Swipe detection system for unity game engine.",
-  "unity": "2020.3",
-  "documentationUrl": "https://github.com/burning-laboratory/unity-swipe-input/tree/main/Assets/BurningLab/SwipeDetector/Docs",
-  "changelogUrl": "https://github.com/burning-laboratory/unity-swipe-input/releases/tag/production-v1.1",
-  "licensesUrl": "https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/burning-laboratory/unity-swipe-input"
-  },
-  "keywords": [
-    "Unity",
-    "Swipe",
-    "Input"
-  ],
-  "scripts": {
-    "build": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ReadmeBuilder.js",
-    "set-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ReleaseSuffixSetter.js",
-    "clear-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ClearVersionSuffix.js",
-    "cache-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesSaver.js",
-    "load-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesLoader.js"
-  },
-  "author": {
-    "name": "Burning-Lab",
-    "email": "support@burning-lab.com",
-    "url": "https://burning-lab.com"
-  },
-  "samples": [
-    {
-      "displayName": "Swipe input demo app",
-      "description": "Example swipe input application.",
-      "path": "Examples/Swipe Input Demo App"
-    }
-  ],
-  "devDependencies": {
-    "com.burning-lab.utils.js-build-utils": "^0.1.5"
-  }
+   "name": "com.burning-lab.swipedetector",
+   "version": "1.0.10-pre",
+   "displayName": "Swipe Detector",
+   "description": "Swipe detection system for unity game engine.",
+   "unity": "2020.3",
+   "documentationUrl": "https://github.com/burning-laboratory/unity-swipe-input/tree/main/Assets/BurningLab/SwipeDetector/Docs",
+   "changelogUrl": "https://github.com/burning-laboratory/unity-swipe-input/releases/tag/production-v1.1",
+   "licensesUrl": "https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/burning-laboratory/unity-swipe-input"
+   },
+   "keywords": [
+      "Unity",
+      "Swipe",
+      "Input"
+   ],
+   "scripts": {
+      "build": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ReadmeBuilder.js",
+      "set-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ReleaseSuffixSetter.js",
+      "clear-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ClearVersionSuffix.js",
+      "cache-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesSaver.js",
+      "load-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesLoader.js"
+   },
+   "author": {
+      "name": "Burning-Lab",
+      "email": "support@burning-lab.com",
+      "url": "https://burning-lab.com"
+   },
+   "samples": [
+      {
+         "displayName": "Swipe input demo app",
+         "description": "Example swipe input application.",
+         "path": "Examples/Swipe Input Demo App"
+      }
+   ],
+   "devDependencies": {
+      "com.burning-lab.utils.js-build-utils": "^0.1.5"
+   }
 }
