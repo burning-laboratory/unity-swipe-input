@@ -104,6 +104,10 @@ namespace BurningLab.SwipeDetector
                                     return;
                                 _lastDetectedSwipeDirection = swipeDirection;
                                 
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                                UnityConsole.PrintLog("SwipeInput", "Update",$"Swipe {swipeDirection} detected.");
+#endif
+                                
                                 _events.onSwipeDetected?.Invoke(swipeDirection);
                                 _swipe.Reset();
                             }
@@ -127,6 +131,10 @@ namespace BurningLab.SwipeDetector
                                 if (swipeDirection == _lastDetectedSwipeDirection)
                                     return;
                                 _lastDetectedSwipeDirection = swipeDirection;
+                                
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                                UnityConsole.PrintLog("SwipeInput", "Update",$"Swipe {swipeDirection} detected.");
+#endif
                                 
                                 _events.onSwipeDetected?.Invoke(swipeDirection);
                                 _swipe.Reset();
