@@ -21,16 +21,10 @@ namespace BurningLab.SwipeDetector.Utils
             {
                 if (delta.x < 0)
                 {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                    UnityConsole.PrintLog("SwipeDetectionUtils", "ComputeSwipeDirection","Swipe right detected");   
-#endif
                     return SwipeDirection.Right;
                 }
                 else
                 {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                    UnityConsole.PrintLog("SwipeDetectionUtils", "ComputeSwipeDirection","Swipe left detected.");   
-#endif
                     return SwipeDirection.Left;
                 }
             }
@@ -38,16 +32,10 @@ namespace BurningLab.SwipeDetector.Utils
             {
                 if (delta.y < 0)
                 {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                    UnityConsole.PrintLog("SwipeDetectionUtils", "ComputeSwipeDirection","Swipe up detected.");
-#endif
                     return SwipeDirection.Up;
                 }
                 else
                 {
-#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
-                    UnityConsole.PrintLog("SwipeDetectionUtils", "ComputeSwipeDirection","Swipe down detected.");
-#endif
                     return SwipeDirection.Down;
                 }
             }
