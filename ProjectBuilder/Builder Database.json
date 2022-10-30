@@ -2,7 +2,7 @@
     "buildsDirectory": "Builds",
     "configurations": [
         {
-            "_expanded": false,
+            "_expanded": true,
             "name": "[WINDOWS] Demo App",
             "targetPlatform": 5,
             "outputFolder": "Windows/[[WINDOWS] Demo App]",
@@ -10,12 +10,12 @@
             "buildAndroidAppBundle": false,
             "exportProject": false,
             "developmentBuild": true,
-            "_scenesExpanded": false,
+            "_scenesExpanded": true,
             "scenes": [
                 {
                     "_expanded": true,
                     "name": "SwipeInputDemoScene",
-                    "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
+                    "path": "Assets/BurningLab/SwipeDetector/Samples/Swipe Input Demo App/Scenes/SwipeInputDemoScene.unity"
                 }
             ],
             "_definesExpanded": false,
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "_expanded": false,
+            "_expanded": true,
             "name": "[ANDROID] Demo App",
             "targetPlatform": 13,
             "outputFolder": "Android",
@@ -38,7 +38,7 @@
                 {
                     "_expanded": true,
                     "name": "SwipeInputDemoScene",
-                    "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
+                    "path": "Assets/BurningLab/SwipeDetector/Samples/Swipe Input Demo App/Scenes/SwipeInputDemoScene.unity"
                 }
             ],
             "_definesExpanded": false,
