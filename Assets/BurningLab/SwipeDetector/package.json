@@ -32,7 +32,7 @@
     {
       "displayName": "Swipe input demo app",
       "description": "Example swipe input application.",
-      "path": "Examples/Swipe Input Demo App"
+      "path": "Samples/Swipe Input Demo App"
     }
   ],
   "devDependencies": {

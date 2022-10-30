@@ -732,6 +732,7 @@ PlayerSettings:
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
   ps4CompatibilityPS5: 0
+  ps4AllowPS5Detection: 0
   ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
@@ -757,8 +758,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: DEBUG_SWIPE_DETECTOR;DEBUG_BURNING_LAB_SDK
-    Standalone: DEBUG_SWIPE_DETECTOR;DEBUG_BURNING_LAB_SDK
+    Android: DEBUG_BURNING_LAB_SDK;DEBUG_PROJECT_BUILDER;DEBUG_SWIPE_DETECTOR
+    Standalone: DEBUG_BURNING_LAB_SDK;DEBUG_SWIPE_DETECTOR
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
