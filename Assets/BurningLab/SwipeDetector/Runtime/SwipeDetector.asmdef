@@ -11,6 +11,7 @@
         "iOS",
         "LinuxStandalone64",
         "macOSStandalone",
+        "WebGL",
         "WindowsStandalone32",
         "WindowsStandalone64"
     ],
