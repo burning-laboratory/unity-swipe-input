@@ -3,16 +3,43 @@
 </p>
 
 <p align="center">
-    <img src="https://build.burning-lab.com/app/rest/builds/buildType:UnitySwipeInput_ProductionBuildAndPublish/statusIcon" alt="Build Status">
-    <a href="https://n-fridman.myjetbrains.com/youtrack/agiles/121-18/current"><img src="https://img.shields.io/badge/Roadmap-YouTrack-orange" alt="Roadmap Link"></a>
-    <img src="https://img.shields.io/badge/Engine-2020.3.4-blueviolet" alt="Unity Version">
-    <img src="https://img.shields.io/badge/Version-1.0.5-blue" alt="Game Version">
+    <img src="https://build.burning-lab.com/app/rest/builds/buildType:id:UnityAssets_ComBurningLabSwipedetector_DevelopmentBuild/statusIcon.svg" alt="Build Status">
+    <a href="https://burning-lab.youtrack.cloud/agiles/131-11/current"><img src="https://img.shields.io/badge/Roadmap-YouTrack-orange" alt="Roadmap Link"></a>
+    <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
+    <img src="https://img.shields.io/badge/Version-1.0.9--exp-blue" alt="Game Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 
 ## About
 
 The swipe capture system was conceived as a separate module that could take over all the work on recognizing and processing swipes on mobile platforms. Interaction with the component is carried out using events. This approach completely separates the code of your project and the code of the component responsible for processing swipes, and a wide set of events will allow you to use this component in any projects and for any tasks.
+
+## Installation
+
+1. Add Burning-Lab registry to Unity Project.
+2. Install package via Unity Package Manager.
+
+**Burning-Lab Registry:**
+```json
+    {
+      "name": "Burning-Lab Registry",
+      "url": "https://packages.burning-lab.com",
+      "scopes": [
+        "com.burning-lab"
+      ]
+    }
+```
+
+## Screenshots
+
+<table>
+    <tr>
+            <img src="https://i.ibb.co/3shJFsJ/Screenshot-1.png" alt="Screenshot">
+    </tr>
+    <tr>
+            <img src="https://i.ibb.co/DwpNfBk/Screenshot-2.png" alt="Screenshot">
+    </tr>
+</table>
 
 ## Documentation
 
@@ -52,7 +79,7 @@ The swipe capture system was conceived as a separate module that could take over
 
 ## Distribute
 
-- Download Burning-Lab.SwipeDetector on [Itch.io](https://nfridman.itch.io/goto-apps-swipe-input)
+- [packages.burning-lab.com](https://packages.burning-lab.com/-/web/detail/com.burning-lab.swipedetector)
 
 ## Developers
 
