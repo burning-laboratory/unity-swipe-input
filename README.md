@@ -6,7 +6,7 @@
     <img src="https://build.burning-lab.com/app/rest/builds/buildType:id:UnityAssets_ComBurningLabSwipedetector_DevelopmentBuild/statusIcon.svg" alt="Build Status">
     <a href="https://burning-lab.youtrack.cloud/agiles/131-11/current"><img src="https://img.shields.io/badge/Roadmap-YouTrack-orange" alt="Roadmap Link"></a>
     <img src="https://img.shields.io/badge/Engine-2020.3-blueviolet" alt="Unity Version">
-    <img src="https://img.shields.io/badge/Version-1.0.10--pre-blue" alt="Game Version">
+    <img src="https://img.shields.io/badge/Version-1.1.0-blue" alt="Game Version">
     <img src="https://img.shields.io/badge/License-MIT-success" alt="License">
 </p>
 
@@ -17,7 +17,7 @@ The swipe capture system was conceived as a separate module that could take over
 ## Installation
 
 1. Add Burning-Lab registry to Unity Project.
-2. Install package via Unity Package Manager.
+2. Install `Swipe Detector` package via Unity Package Manager.
 
 **Burning-Lab Registry:**
 ```json
@@ -34,7 +34,7 @@ The swipe capture system was conceived as a separate module that could take over
 
 <table>
     <tr>
-            <img src="https://i.ibb.co/3shJFsJ/Screenshot-1.png" alt="Screenshot">
+            <img src="https://i.ibb.co/WGzP5hD/Screenshot-1.png" alt="Screenshot">
     </tr>
     <tr>
             <img src="https://i.ibb.co/DwpNfBk/Screenshot-2.png" alt="Screenshot">
@@ -44,24 +44,23 @@ The swipe capture system was conceived as a separate module that could take over
 ## Documentation
 
 ### Settings:
-- **-** **`Swipe Detection Mode (DetectionMode)`** - Swipes detection mode.
+
+- **-** **`Swipe Detection Mode (DetectionMode)`** - Swipe recognition mode. Completed or incomplete swipe.
+
+- **-** **`Detect multiple swipes (bool)`** - Enable it if you need to recognize multiple swipes without taking your finger off the screen.
+
+- **-** **`Handle Keyboard Arrows Clicks (bool)`** - Enable it if you need to trigger swipe processing events when pressing the arrows on the keyboard.
 
 - **-** **`Min Swipe Distance (float)`** - Minimum swipe length.
 
 - **-** **`Is Paused (bool)`** - Pause. If the value is `true`, the component does not process swipes and does not raise events.
 
 ### Events:
-- **-** **`Swipe Start (UnityEvent<Vector2>)`** - An event that is triggered when the user touches the screen.
+- **-** **`On Swipe Start (UnityEvent<Vector2>)`** - An event that is triggered when the user touches the screen.
 
-- **-** **`Swipe End (UnityEvent<Vector2>)`** - An event that is triggered when the user releases the screen.
+- **-** **`On Swipe End (UnityEvent<Vector2>)`** - An event that is triggered when the user releases the screen.
 
-- **-** **`Swipe Up (UnityEvent)`** - An event that is triggered when a player makes an up swipe.
-
-- **-** **`Swipe Right (UnityEvent)`** - The event that is triggered when the player makes a swipe to the right.
-
-- **-** **`Swipe Down (UnityEvent)`** - The event that is triggered when the player makes a swipe down.
-
-- **-** **`Swipe Left (UnityEvent)`** - The event that is triggered when the player makes a swipe to the left.
+- **-** **`On Swipe Detected (SwipeDirection)`** - Called when the swipe is recognized.
 
 ### Methods:
 - **-** **`SwipeInput.SetPause()`** **`void`** - Sets the pause.
@@ -73,9 +72,6 @@ The swipe capture system was conceived as a separate module that could take over
 - `DEBUG_BURNING_LAB_SDK` - Output all Burning-Lab sdk logs.
 
 - `DEBUG_SWIPE_DETECTOR` - Output swipe detector logs only.
-
-### Examples:
-- **-** **`BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene`**
 
 ## Distribute
 
