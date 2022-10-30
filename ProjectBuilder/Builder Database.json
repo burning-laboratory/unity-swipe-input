@@ -13,7 +13,7 @@
             "_scenesExpanded": false,
             "scenes": [
                 {
-                    "_expanded": false,
+                    "_expanded": true,
                     "name": "SwipeInputDemoScene",
                     "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
                 }
@@ -33,10 +33,10 @@
             "buildAndroidAppBundle": false,
             "exportProject": false,
             "developmentBuild": true,
-            "_scenesExpanded": false,
+            "_scenesExpanded": true,
             "scenes": [
                 {
-                    "_expanded": false,
+                    "_expanded": true,
                     "name": "SwipeInputDemoScene",
                     "path": "Assets/BurningLab/SwipeDetector/Examples/Scenes/SwipeInputDemoScene.unity"
                 }
