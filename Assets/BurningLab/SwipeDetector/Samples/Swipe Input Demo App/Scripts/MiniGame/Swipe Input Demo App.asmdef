@@ -1,0 +1,17 @@
+{
+    "name": "SwipeInputDemoApp",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8fb32673df948cf418f8e014396524e7",
+        "GUID:a2c8d973dc13fb64faae3649b233c896"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
