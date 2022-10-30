@@ -1,11 +1,11 @@
 {
   "name": "com.burning-lab.swipedetector",
-  "version": "1.0.9-exp",
+  "version": "1.0.10-pre",
   "displayName": "Swipe Detector",
   "description": "Swipe detection system for unity game engine.",
-  "unity": "2020.3",
-  "documentationUrl": "https://github.com/burning-laboratory/unity-swipe-input/tree/main/Assets/BurningLab/SwipeDetector/Docs",
-  "changelogUrl": "https://github.com/burning-laboratory/unity-swipe-input/releases/tag/production-v1.1",
+  "unity": "2021.3",
+  "documentationUrl": "https://burning-lab.youtrack.cloud/articles/SD-A-1/Swipe-Detector-Dokumentatsiya",
+  "changelogUrl": "https://github.com/burning-laboratory/unity-swipe-input/releases",
   "licensesUrl": "https://github.com/burning-laboratory/unity-swipe-input/blob/main/LICENSE.txt",
   "repository": {
     "type": "git",
