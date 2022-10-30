@@ -13,8 +13,8 @@ namespace BurningLab.SwipeDetector
         [System.Serializable]
         private struct InputEvents
         {
-            public UnityEvent<Vector2> swipeStart;
-            public UnityEvent<Vector2> swipeEnd;
+            public UnityEvent<Vector2> onSwipeStart;
+            public UnityEvent<Vector2> onSwipeEnd;
             public UnityEvent<SwipeDirection> onSwipeDetected;
         }
 
@@ -33,6 +33,9 @@ namespace BurningLab.SwipeDetector
 
         [Tooltip("Enable if need detection more 1 swipe directions before user release touch.")]
         [SerializeField] private bool _detectMultipleSwipes;
+
+        [Tooltip("Handle key keyboard arrows as swipes.")]
+        [SerializeField] private bool _handleKeyboardArrowsClicks;
         
         [Tooltip("Minimal swipe lenght.")] 
         [SerializeField] [Range(0, 1000)] private float _minSwipeDistance;
@@ -59,12 +62,12 @@ namespace BurningLab.SwipeDetector
         /// <summary>
         /// On swipe start event.
         /// </summary>
-        public UnityEvent<Vector2> OnSwipeStart => _events.swipeStart;
+        public UnityEvent<Vector2> OnSwipeStart => _events.onSwipeStart;
         
         /// <summary>
         /// On swipe end event.
         /// </summary>
-        public UnityEvent<Vector2> OnSwipeEnd => _events.swipeEnd;
+        public UnityEvent<Vector2> OnSwipeEnd => _events.onSwipeEnd;
         
         /// <summary>
         /// On swipe detected event.
@@ -78,11 +81,36 @@ namespace BurningLab.SwipeDetector
         private void Update()
         {
             if (_isPaused) return;
+
+            if (_handleKeyboardArrowsClicks)
+            {
+                SwipeDirection swipeDirection = SwipeDirection.Default;
+                
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                    swipeDirection = SwipeDirection.Up;
+
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                    swipeDirection = SwipeDirection.Right;
+
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                    swipeDirection = SwipeDirection.Down;
+
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    swipeDirection = SwipeDirection.Left;
+                
+                if (swipeDirection != SwipeDirection.Default)
+                {
+                    OnSwipeDetected?.Invoke(swipeDirection);
+#if DEBUG_BURNING_LAB_SDK || DEBUG_SWIPE_DETECTOR
+                    UnityConsole.PrintLog("SwipeInput", "Update",$"Swipe {swipeDirection} detected.");
+#endif
+                }
+            }
             
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _swipe.positionStart = Input.mousePosition;
-                _events.swipeStart.Invoke(_swipe.positionStart);
+                _events.onSwipeStart.Invoke(_swipe.positionStart);
             }
 
             if (Input.GetKey(KeyCode.Mouse0))
@@ -95,7 +123,7 @@ namespace BurningLab.SwipeDetector
                     case DetectionMode.Completed:
                         if (Input.GetKeyUp(KeyCode.Mouse0))
                         {
-                            _events.swipeEnd.Invoke(_swipe.positionEnd);
+                            _events.onSwipeEnd.Invoke(_swipe.positionEnd);
                             if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
                             {
                                 SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
@@ -125,7 +153,7 @@ namespace BurningLab.SwipeDetector
 
                             if (SwipeDetectionUtils.IsSwipeALongMinDistance(_swipe, _minSwipeDistance))
                             {
-                                _events.swipeEnd.Invoke(_swipe.positionEnd);
+                                _events.onSwipeEnd.Invoke(_swipe.positionEnd);
                                 SwipeDirection swipeDirection = SwipeDetectionUtils.ComputeSwipeDirection(_swipe);
                                 
                                 if (swipeDirection == _lastDetectedSwipeDirection)
