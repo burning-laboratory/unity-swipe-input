@@ -21,7 +21,10 @@
     "set-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ReleaseSuffixSetter.js",
     "clear-suffix": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/ClearVersionSuffix.js",
     "cache-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesSaver.js",
-    "load-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesLoader.js"
+    "load-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependenciesLoader.js",
+    "restore-dependencies": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/DependencyRestore.js",
+    "process-samples": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/SamplesProcessor.js",
+    "restore-samples": "node ./node_modules/com.burning-lab.utils.js-build-utils/Bin/SamplesRestore.js"
   },
   "author": {
     "name": "Burning-Lab",
@@ -36,6 +39,6 @@
     }
   ],
   "devDependencies": {
-    "com.burning-lab.utils.js-build-utils": "^0.1.5"
+    "com.burning-lab.utils.js-build-utils": "^0.1.10"
   }
 }
