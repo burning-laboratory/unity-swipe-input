@@ -81,3 +81,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Node Modules Folders
+/node_modules/
+node_modules.meta
