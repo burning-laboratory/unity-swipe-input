@@ -4,10 +4,7 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "SwipeDetector",
-        "SwipeDetector.Types",
-        "SwipeDetector.Utils",
-        "SwipeDetector.RuntimeTests.TestsData"
+        "SwipeDetector"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
