@@ -30,17 +30,6 @@ The swipe capture system was conceived as a separate module that could take over
     }
 ```
 
-## Screenshots
-
-<table>
-    <tr>
-            <img src="https://i.ibb.co/WGzP5hD/Screenshot-1.png" alt="Screenshot">
-    </tr>
-    <tr>
-            <img src="https://i.ibb.co/DwpNfBk/Screenshot-2.png" alt="Screenshot">
-    </tr>
-</table>
-
 ## Documentation
 
 ### Settings:
