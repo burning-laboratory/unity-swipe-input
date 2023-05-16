@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.burning-lab.projectbuilder": {
-      "version": "0.1.11-exp",
+      "version": "0.1.13-exp",
       "depth": 0,
       "source": "registry",
       "dependencies": {
