@@ -1,12 +1,5 @@
 {
     "buildsDirectory": "Builds",
-    "addressableContent": {
-        "_expanded": false,
-        "buildAddressableContent": false,
-        "settingsAssetPath": "",
-        "profileName": "",
-        "buildScript": ""
-    },
     "configurations": [
         {
             "name": "com.burninglab.swipedetector",
@@ -24,7 +17,6 @@
             "scenes": [
                 {
                     "name": "SwipeInputDemoScene",
-                    "path": "Assets/BurningLab/SwipeDetector/Samples/Swipe Input Demo App/Scenes/SwipeInputDemoScene.unity",
                     "guid": "945379dfdfd566803becd56fd9d8234c"
                 }
             ],
@@ -52,7 +44,127 @@
             "applicationIdentifier": "com.burninglab.swipedetector",
             "androidBundleVersionCode": 1,
             "androidMinimumSdkVersion": 22,
-            "androidTargetSdkVersion": 0
+            "androidTargetSdkVersion": 0,
+            "fullScreenMode": 0,
+            "androidBlitType": 0,
+            "resizableWindow": false,
+            "renderOutsideSafeArea": false,
+            "optimizedFramePacing": false,
+            "resetResolutionOnWindowResize": false,
+            "defaultOrientation": 0,
+            "allowPortraitOrientation": false,
+            "allowPortraitUpdiseDownOrientation": false,
+            "allowLandscapeLeftOrientation": false,
+            "allowLandscapeRightOrientation": false,
+            "disableDepthAndStencil": false,
+            "androidShowLoadingIndicator": 0,
+            "androidIconGroups": [
+                {
+                    "iconKind": 0,
+                    "icons": [
+                        {
+                            "iconTitle": "xxxhdpi (432x432)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xxhdpi (324x324)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xhdpi (216x216)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "hdpi (162x162)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "mhdpi (108x108)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "ldpi (81x81)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        }
+                    ]
+                },
+                {
+                    "iconKind": 1,
+                    "icons": [
+                        {
+                            "iconTitle": "xxxhdpi (192x192)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xxhdpi (144x144)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xhdpi (96x96)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "hdpi (72x72)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "mhdpi (48x48)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "ldpi (36x36)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        }
+                    ]
+                },
+                {
+                    "iconKind": 2,
+                    "icons": [
+                        {
+                            "iconTitle": "xxxhdpi (192x192)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xxhdpi (144x144)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "xhdpi (96x96)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "hdpi (72x172)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "mhdpi (48x48)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        },
+                        {
+                            "iconTitle": "ldpi (36x36)",
+                            "backgroundTextureGuid": "",
+                            "foregroundTextureGuid": ""
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
