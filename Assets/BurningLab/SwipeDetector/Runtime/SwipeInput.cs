@@ -189,7 +189,15 @@ namespace BurningLab.SwipeDetector
         /// Unset Pause (Recognize swipes).
         /// </summary>
         public void UnsetPause() => _isPaused = false;
-
+        
+        /// <summary>
+        /// Reset last detected swipe direction.
+        /// </summary>
+        public void Reset()
+        {
+            _lastDetectedSwipeDirection = SwipeDirection.Default;
+        }
+        
         #endregion
     }
 }
